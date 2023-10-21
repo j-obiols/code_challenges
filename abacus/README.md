@@ -1,12 +1,14 @@
-### Reto #31 de [Retos Semanales'23 by mouredev](https://retosdeprogramacion.com/semanales2023) 
-
-<br>
- 
 ## EL ÁBACO
 
 <br>
 
-Crea una función que sea capaz de leer el número representado por el ábaco.
+*Basado en el Reto31 de Retos Semanales'23 by mouredev. Se ha añadido al anunciado la generación de un ábaco aleatorio.*
+  
+<br>
+
+**Crea una función que sea capaz de representar por terminal un ábaco aleatorio, y otra función que sea capaz de leer el número representado por el ábaco.**
+
+<br>
 
 >  El ábaco se representa por un array con 7 elementos.
 
@@ -19,6 +21,8 @@ Crea una función que sea capaz de leer el número representado por el ábaco.
 <br>
 
 Ejemplo de array y resultado:
+
+<br>
 
 ["O---OOOOOOOO", 
 
@@ -33,6 +37,8 @@ Ejemplo de array y resultado:
  "OOOOOOOOO---",
  
 "---OOOOOOOOO"]
+
+<br>
 
 Resultado: 1.302.790
 

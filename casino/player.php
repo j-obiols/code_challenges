@@ -5,7 +5,7 @@
         public string $name;
         public int $totalAmount;
         public bool $inCasino;
-        static $casino = array();
+        
 
 
         public function __construct($name){

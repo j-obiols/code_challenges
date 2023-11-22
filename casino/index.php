@@ -1,8 +1,8 @@
 <?php
 
 
-    require 'player.php';
     require 'casino.php';
+    require 'player.php';
 
 
     $anna = new Player("Anna");
@@ -13,32 +13,31 @@
     $berta = new Player("Berta");
     $cristina = new Player("Cristina");
 
-    $casino = array();
-    array_push($casino, $anna, $omer, $miquel, $jordi, $amalia, $berta, $cristina);
+    $casino = new Casino();
 
     
-    $anna-> enters();
-    $anna -> wins(50);
-    $anna -> wins(-200);
-    $anna -> leaves();
-    $omer -> enters();
-    $jordi -> enters();
-    $omer -> wins(100);
-    $miquel -> enters();
-    $omer -> wins(-40);
-    $omer -> leaves();
-    $jordi -> wins(30);
-    $omer -> enters();
-    $omer -> wins(-20);
-    status($casino);
+    $casino -> enters($anna);
+    $casino-> wins($anna, 50);
+    $casino -> wins($anna, -200);
+    $casino -> leaves($anna);
+    $casino -> enters($omer);
+    $casino -> enters($jordi);
+    $casino -> wins( $omer, 100);
+    $casino -> enters($miquel);
+    $casino -> wins( $omer,- 40);
+    $casino -> leaves($omer);
+    $casino -> wins($jordi, 30);
+    $casino -> enters($omer);
+    $casino -> wins($omer, -20);
+    $casino -> status();
 
-    $amalia -> leaves();
-    $berta -> wins(3);
-    $cristina-> enters();
-    $cristina-> wins(7);
-    $cristina -> leaves();
-    $cristina -> leaves();
-    $miquel -> wins(100);
-    $omer -> wins(50);
-    $jordi -> wins(200);
-    status($casino); 
+    $casino -> leaves($amalia);
+    $casino -> wins($berta, 3);
+    $casino ->enters($cristina);
+    $casino-> wins($cristina, 7);
+    $casino -> leaves($cristina); 
+    $casino -> leaves($cristina);
+    $casino -> wins($miquel, 100);
+    $casino -> wins($omer, 50);
+    $casino-> wins( $jordi, 200);
+    $casino -> status(); 

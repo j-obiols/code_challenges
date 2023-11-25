@@ -5,6 +5,10 @@
 
     $n = readline("Enter an integer number: ");
 
-    createMultiplicationTable($n);
 
-?>
+
+    if(checkInputData($n)) {
+        createMultiplicationTable($n);
+    } else {
+        echo "Invalid input.";
+    } 

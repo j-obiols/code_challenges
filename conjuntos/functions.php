@@ -1,8 +1,11 @@
 <?php
 
 
-function checkCommon(array $array1, array $array2, bool $bool): array {
+function checkCommon(array $array1, array $array2, bool $bool) {
     
+    $array1 = array_unique($array1);
+    $array2 = array_unique($array2);
+
     $merge = array_merge($array1, $array2);
    
     $firstFilter= [];

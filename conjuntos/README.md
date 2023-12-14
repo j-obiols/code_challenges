@@ -10,7 +10,7 @@ de los dos array.
 - No se pueden utilizar operaciones del lenguaje que
 lo resuelvan directamente.
 
-Enunciado adoptado en la primera versión: 
+**Enunciado adoptado en la primera versión:** 
 
 Crea una función que reciba dos array, un booleano y retorne un array.
 - Si el booleano es verdadero **retornará** los elementos comunes

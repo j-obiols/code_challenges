@@ -17,10 +17,8 @@ function checkCommon(array $array1, array $array2, bool $bool): array {
 
 function findCommonValues(array $array1, array $array2): array{
 
-    $array1 = array_unique($array1);
-    $array2 = array_unique($array2);
-    $merge = array_merge($array1, $array2);
-   
+    $merge = array_merge(array_unique($array1), array_unique($array2));
+    
     $filter= [];
     $common = [];
 
@@ -41,13 +39,10 @@ function findCommonValues(array $array1, array $array2): array{
 
 
 function findUncommonValues(array $array1, array $array2): array {
-
-    $array1 = array_unique($array1);
-    $array2 = array_unique($array2);
     
     $common = findCommonValues($array1, $array2);
      
-    $merge = array_merge($array1, $array2);
+    $merge = array_unique(array_merge($array1, $array2));
     
     $uncommon = [];
 

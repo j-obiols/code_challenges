@@ -1,36 +1,62 @@
 <?php
 
 
-function checkCommon(array $array1, array $array2, bool $bool) {
+function checkCommon(array $array1, array $array2, bool $bool): array {
     
+    if($bool) {
+
+        return findCommonValues($array1, $array2);
+
+    } elseif(!$bool) {
+
+        return findUncommonValues($array1, $array2);
+    }
+    
+}
+
+
+function findCommonValues(array $array1, array $array2): array{
+
     $array1 = array_unique($array1);
     $array2 = array_unique($array2);
-
     $merge = array_merge($array1, $array2);
    
-    $firstFilter= [];
+    $filter= [];
     $common = [];
-    $uncommon = [];
 
-    foreach($merge as $member){ 
+    foreach($merge as $value){ 
         
-        if(!in_array($member, $firstFilter)){
-            array_push($firstFilter, $member);
-        } elseif(in_array($member, $firstFilter)){
-            array_push($common, $member);
+        if(!in_array($value, $filter)) {
+
+            array_push($filter, $value);
+
+        } elseif(in_array($value, $filter)) {
+
+            array_push($common, $value);
         } 
     }
 
-    foreach($firstFilter as $member){
-        if(!in_array($member, $common)){
-           array_push($uncommon, $member);
+    return $common;
+}
+
+
+function findUncommonValues(array $array1, array $array2): array {
+
+    $array1 = array_unique($array1);
+    $array2 = array_unique($array2);
+    
+    $common = findCommonValues($array1, $array2);
+     
+    $merge = array_merge($array1, $array2);
+    
+    $uncommon = [];
+
+    foreach($merge as $value) {
+
+        if(!in_array($value, $common)){
+            array_push($uncommon, $value);
         }
     }
 
-    if($bool){
-        return $common;
-    }elseif(!$bool){
-        return $uncommon;
-    }
-    
-};
+    return $uncommon;
+} 

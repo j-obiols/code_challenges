@@ -1,4 +1,5 @@
 ## EL FAMOSO "FIZZ BUZZ"
+#### Dificultad:  * 
 #### [Reto #02022 de Mouredev](https://retosdeprogramacion.com/ejercicios/)
 
 Escribe un programa que muestre por consola (con un print) los

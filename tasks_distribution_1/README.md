@@ -12,3 +12,7 @@ La tria d'un llistat d'activitats junt amb la llista actual d'alumnes del grup h
 
 (*) En l'enunciat original:
 *La tria d'una d'aquestes opcions(*) junt amb la llista actual d'alumnes a l'aula...*
+
+----
+
+This code allows to create students, groups of students, tasks, lists of tasks, and to **distribute randomly the tasks of a list among the students of a group.**

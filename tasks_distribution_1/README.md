@@ -1,4 +1,4 @@
-## Kata de l'especialitat Full Stack Developer PHP It Academy
+## Kata 24 de l'especialitat Full Stack Developer PHP It Academy
 https://github.com/CloudSalander/kata-activity-volunteer
 
 Donada l'absència de voluntaris/es per segons quines activitats a l'aula, volem crear un "generador de voluntaris/ies"!

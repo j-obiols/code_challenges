@@ -5,9 +5,9 @@ Es tracta de representar informació i processos de compra en el context del joc
 
 En concret necessitarem registrar:
 
-Nom 
+- Nom 
 
-Unitats de: Fusta, llana, cereals, argila i metall. 
+- Unitats que té de: fusta, llana, cereals, argila i metall. 
 
 
 Un jugador pot comprar:

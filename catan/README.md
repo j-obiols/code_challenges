@@ -1,7 +1,7 @@
 # CATAN
 [Kata 27 per l'especialitat Full Stack PHP 1-2-24](https://github.com/CloudSalander/kata-catan)
 
-Es tracta de representar informació i processos de compra en el context del joc de taula **Catán.**
+Es tracta de representar informació i processos de compra en el context del joc de taula **Catan.**
 
 En concret necessitarem registrar:
 
@@ -23,7 +23,7 @@ Un jugador pot comprar:
 
 Si un jugador no pot comprar el recurs en qüestió, s'ha de mostrar un missatge d'error. 
 
-**Programa un jugador de Catán que pugui realitzar aquestes operacions.** 
+**Programa un jugador de Catan que pugui realitzar aquestes operacions.** 
 
 Bonus track: Fes el mateix amb més d'un jugador. 
 

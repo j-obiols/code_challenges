@@ -14,10 +14,10 @@ $alba -> setWools(5);
 $alba -> setClays(5); 
 
 
-echo $alba -> buyRoad();
-echo $alba -> buyVillage();
-echo $alba -> buyCity();
-echo $alba -> buyDevelomentCard();
+echo $alba -> buyProperty("road"); 
+echo $alba -> buyProperty("village"); 
+echo $alba -> buyProperty("city"); 
+echo $alba -> buyProperty("development card"); 
 
 
 //Checking existing resources after first operations:
@@ -25,10 +25,10 @@ echo $alba -> buyDevelomentCard();
 echo $alba -> getClays()." clays.\n";
 echo $alba -> getOres()." ores.\n";
 echo $alba -> getWoods()." woods.\n";
-echo $alba -> getWools()." wools.\n";  */
+echo $alba -> getWools()." wools.\n"; 
+*/
 
-
-echo $alba -> buyRoad();
-echo $alba -> buyVillage();
-echo $alba -> buyCity();
-echo $alba -> buyDevelomentCard(); 
+echo $alba -> buyProperty("road"); 
+echo $alba -> buyProperty("village"); 
+echo $alba -> buyProperty("city"); 
+echo $alba -> buyProperty("development card"); 

@@ -17,3 +17,7 @@ var_dump(is_anagrama("Mar","MAR"));
 var_dump(is_anagrama(23, "hola"));
 
 var_dump(is_anagrama(true, false));
+
+var_dump(is_anagrama("Joana", "ANAOJ"));
+
+var_dump(is_anagrama("tOMAS", "SAMOT"));

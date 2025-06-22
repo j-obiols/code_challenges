@@ -4,7 +4,7 @@ function check_unit($unit) {
      
     $units = array("km", "hm", "dam", "m", "dm", "cm", "mm");
 
-    if (is_numeric($unit) OR !in_array($unit, $units)) {
+    if (!in_array($unit, $units)) {
 
         return false;
 

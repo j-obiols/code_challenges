@@ -1,6 +1,6 @@
 <?php 
 
-function check_unit($unit) {
+function check_unit($unit): bool {
      
     $units = array("km", "hm", "dam", "m", "dm", "cm", "mm");
 
@@ -15,10 +15,18 @@ function check_unit($unit) {
     }
 }
 
-function area_rectangle($unit, $width, $height) {
+
+function calculate_rectangle_area($width, $height): float {
  
     $area = $width * $height;
 
-    echo "Area = ". $area." ".$unit. " 2 " ;  
+    return $area;  
+
+}
+
+
+function print_response($area, $unit) {
+     
+    return "Area = ".$area." ".$unit. "2";
 
 }

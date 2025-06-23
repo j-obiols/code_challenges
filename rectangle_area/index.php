@@ -7,11 +7,11 @@ echo "Introduce the length unit you want to use (km, hm, dam, m, dm, cm, mm):";
 
 $unit = strtolower(readline());
 
-$response = check_unit($unit);
+$valid_unit = check_unit($unit);
 
-if ($response == false) {
+if (!$valid_unit) {
            
-    echo "Invalid data. Please try again";
+    echo "Invalid data. Please start again.";
 
 } else {
        
@@ -25,7 +25,11 @@ if ($response == false) {
        
     if (is_numeric($width) && $width > 0 && is_numeric($height) && $height > 0) {
 
-        area_rectangle($unit, $width, $height);
+        $area = calculate_rectangle_area($width, $height);
+
+        $response = print_response($area, $unit);
+
+        echo $response;
 
     } else {
        

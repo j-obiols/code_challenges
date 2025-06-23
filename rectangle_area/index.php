@@ -3,15 +3,13 @@
 require 'functions.php';
 
 
-echo "Introduce the length unit you want to use (km, hm, dam, m, dm, cm, mm):";
+echo "Introduce the length unit you want to use (km, hm, dam, m, dm, cm, mm, in, ft, yd, mi, nmi):";
 
 $unit = strtolower(readline());
 
-$valid_unit = check_unit($unit);
-
-if (!$valid_unit) {
+if (!check_unit($unit)) {
            
-    echo "Invalid data. Please start again.";
+    echo "Invalid unit. Please start again.";
 
 } else {
        
@@ -19,21 +17,30 @@ if (!$valid_unit) {
 
     $width = readline(); 
 
-    echo "Introduce rectangle's height:";
+    if(!check_value($width)) {
 
-    $height = readline(); 
+        echo "Width must be a positive number.";
+
+    } else { 
+
+        echo "Introduce rectangle's height:";
+
+        $height = readline(); 
+
+        if(!check_value($height)) {
+
+           echo "Height must be a positive number.";
+
+        } else {
+
+            $area = calculate_rectangle_area($width, $height);
+
+            $response = print_response($area, $unit);
+
+            echo $response;
+
+        }
        
-    if (is_numeric($width) && $width > 0 && is_numeric($height) && $height > 0) {
-
-        $area = calculate_rectangle_area($width, $height);
-
-        $response = print_response($area, $unit);
-
-        echo $response;
-
-    } else {
-       
-        echo "Invalid width and/or invalid length. Please start again."; 
     }
 
 }
